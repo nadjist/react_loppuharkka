@@ -11,10 +11,9 @@ const useQuotes = () => {
       let filter = state.quotes.filter(
         (quote) => quote.quote.split(" ").length === +state.wordcount
       );
-      console.log("KAKKAK" + filter);
       setState({ ...state, filteredQuotes: filter });
     }
-  }, [state.quotes, state.filteredQuotes, state.wordcount]);
+  }, [state.quotes, state.wordcount]);
 
   const fetchQuote = async () => {
     const API_URL = "https://api.kanye.rest/";
@@ -36,6 +35,10 @@ const useQuotes = () => {
     setState({ ...state, quotes: quo });
   };
 
+  // const deleteAll = () => {
+  //   setState({ ...state, quotes: (state.quotes.length = 0) });
+  // };
+
   return {
     filteredQuotes: state.filteredQuotes,
     fetchQuote,
@@ -44,6 +47,7 @@ const useQuotes = () => {
     totalCount: state.quotes.length,
     filteredCount: state.filteredQuotes.length,
     deleteQuote,
+    // deleteAll,
   };
 };
 

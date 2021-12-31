@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useQuotes from "../useQuotes";
 
 function Delete() {

@@ -4,8 +4,6 @@ import Delete from "./components/Delete";
 import Filter from "./components/Filter";
 import Counters from "./components/Counters";
 import QuoteList from "./components/QuoteList";
-import { useEffect } from "react";
-import useQuotes from "./useQuotes";
 
 function App() {
   return (
@@ -13,7 +11,7 @@ function App() {
       <Title appname="Kanye Oneliners" />
       <div>
         <Fetch />
-        <Delete />
+        {/* <Delete /> */}
       </div>
       <div>
         <Filter />
