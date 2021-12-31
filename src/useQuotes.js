@@ -35,9 +35,9 @@ const useQuotes = () => {
     setState({ ...state, quotes: quo });
   };
 
-  // const deleteAll = () => {
-  //   setState({ ...state, quotes: (state.quotes.length = 0) });
-  // };
+  const deleteAll = () => {
+    setState({ ...state, quotes: [] });
+  };
 
   return {
     filteredQuotes: state.filteredQuotes,
@@ -47,7 +47,7 @@ const useQuotes = () => {
     totalCount: state.quotes.length,
     filteredCount: state.filteredQuotes.length,
     deleteQuote,
-    // deleteAll,
+    deleteAll,
   };
 };
 

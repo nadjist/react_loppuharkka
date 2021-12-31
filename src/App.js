@@ -9,17 +9,19 @@ function App() {
   return (
     <div>
       <Title appname="Kanye Oneliners" />
-      <div>
-        <Fetch />
-        {/* <Delete /> */}
+      <div className="flex justify-between mx-10">
+        <div className="flex flex-col gap-4">
+          <Fetch />
+          <Delete />
+        </div>
+        <div>
+          <Filter />
+        </div>
+        <div>
+          <Counters />
+        </div>
       </div>
-      <div>
-        <Filter />
-      </div>
-      <div>
-        <Counters />
-      </div>
-      <div>
+      <div className="mx-10 my-10">
         <QuoteList />
       </div>
     </div>

@@ -1,21 +1,25 @@
 import useQuotes from "../useQuotes";
 
 const Quote = ({ quote }) => {
-  const { deleteQuote } = useQuotes();
+  const { deleteQuote, filteredQuotes } = useQuotes();
 
   const deleteClick = () => {
-    deleteQuote({quote});
+    deleteQuote({ quote });
   };
   return (
-    <div style={{ border: "1px solid gray" }}>
-      <div>{quote}</div>
-      <div className="flex space-x-3">
-        <input
-          type="button"
-          value="delete"
-          className="btn btn-red"
-          onClick={deleteClick}
-        />
+    <div className="flex justify-between items-center mb-5 border-2 px-2 py-2 h-20">
+      <div className="flex">{quote}</div>
+      <div className="flex">
+        {filteredQuotes.length === 0 ? (
+          <span></span>
+        ) : (
+          <button
+            onClick={deleteClick}
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 h-10 border border-red-700 rounded"
+          >
+            Delete
+          </button>
+        )}
       </div>
     </div>
   );

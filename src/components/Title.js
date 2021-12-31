@@ -1,6 +1,6 @@
 function Title(props) {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="text-2xl flex justify-center py-5">
       <h1>{props.appname}</h1>
     </div>
   );
