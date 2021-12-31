@@ -1,16 +1,29 @@
-import React from 'react';
+import Title from "./components/Title";
+import Fetch from "./components/Fetch";
+import Delete from "./components/Delete";
+import Filter from "./components/Filter";
+import Counters from "./components/Counters";
+import QuoteList from "./components/QuoteList";
+import { useEffect } from "react";
+import useQuotes from "./useQuotes";
 
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Title appname="Kanye Oneliners" />
+      <div>
+        <Fetch />
+        <Delete />
+      </div>
+      <div>
+        <Filter />
+      </div>
+      <div>
+        <Counters />
+      </div>
+      <div>
+        <QuoteList />
+      </div>
     </div>
   );
 }
